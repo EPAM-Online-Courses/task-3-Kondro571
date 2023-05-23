@@ -61,7 +61,7 @@ public class Main {
         if(cheakIfAlives(villagers)){
             System.out.println("Obozowisko ocalone!");
         }else{
-            System.out.println("Obozowisko ocalone!");
+            System.out.println("Obozowisko nie ocalone!");
         }
 
 
