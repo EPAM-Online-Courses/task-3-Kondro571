@@ -53,8 +53,8 @@ public class Main {
                 monsters.getBlacksmith().attack(villagers[index]);
             }
 
-            System.out.println("Potwory posiadają jeszcze " + monsters.getMonstersHealth() + " punkty życia ");
-            System.out.println("Aktualnie walczący osadnik to " + villagers[index].getName());
+            System.out.println("Potwory posiadaja jeszcze " + monsters.getMonstersHealth() + " punkty zycia ");
+            System.out.println("Aktualnie walczacy osadnik to " + villagers[index].getName());
 
 
         }
