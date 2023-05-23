@@ -1,4 +1,4 @@
-package efs.task.oop
+package efs.task.oop;
 
 abstract class Monster implements Fighter {
     private int health;
