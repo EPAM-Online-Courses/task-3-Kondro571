@@ -1,4 +1,4 @@
-package efs.task.oop
+package efs.task.oop;
 
 import java.util.Random;
 public class Main {
