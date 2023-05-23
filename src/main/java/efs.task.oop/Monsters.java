@@ -1,4 +1,4 @@
-package efs.task.oop
+package efs.task.oop;
 
 public class Monsters {
     static final Monster andariel = new Monster(10, 70) {
