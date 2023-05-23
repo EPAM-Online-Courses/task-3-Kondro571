@@ -3,44 +3,7 @@ package efs.task.oop;
 import java.util.Random;
 public class Main {
     public static void main(String[] args) {
- /*
-
-        Villager kashya = new Villager("Kashya", 30);
-        ExtraordinaryVillager akara = new ExtraordinaryVillager("Akara", 40, ExtraordinaryVillager.Skill.SHELTER);
-        Villager gheed = new Villager("Gheed", 50);
-        ExtraordinaryVillager deckardCain = new ExtraordinaryVillager("Deckard Cain", 85, ExtraordinaryVillager.Skill.IDENTIFY);
-        Villager warriv = new Villager("Warriv", 35);
-        Villager flawia = new Villager("Flawia", 25);
-
-        kashya.sayHello();
-        akara.sayHello();
-        gheed.sayHello();
-        deckardCain.sayHello();
-        warriv.sayHello();
-        flawia.sayHello();
-
-    Villager deckardCain = new Villager("Deckard Cain", 85);
-        Villager akara = new Villager("Akara", 40);
-        ExtraordinaryVillager extraordinaryDeckardCain = new ExtraordinaryVillager("Deckard Cain", 85, ExtraordinaryVillager.Skill.IDENTIFY);
-        ExtraordinaryVillager extraordinaryAkara = new ExtraordinaryVillager("Akara", 40, ExtraordinaryVillager.Skill.SHELTER);
-
-        deckardCain.sayHello();
-        akara.sayHello();
-        extraordinaryDeckardCain.sayHello();
-        extraordinaryAkara.sayHello();
-
-        Object objectDeckardCain = deckardCain;
-        Object objectAkara = akara;
-        Object objectExtraordinaryDeckardCain = extraordinaryDeckardCain;
-        Object objectExtraordinaryAkara = extraordinaryAkara;
-
-        System.out.println("Can objectDeckardCain call ExtraordinaryVillager methods? " + (objectDeckardCain instanceof ExtraordinaryVillager));
-        System.out.println("Can objectAkara call ExtraordinaryVillager methods? " + (objectAkara instanceof ExtraordinaryVillager));
-        System.out.println("Can objectExtraordinaryDeckardCain call ExtraordinaryVillager methods? " + (objectExtraordinaryDeckardCain instanceof ExtraordinaryVillager));
-        System.out.println("Can objectExtraordinaryAkara call ExtraordinaryVillager methods? " + (objectExtraordinaryAkara instanceof ExtraordinaryVillager));
-    
-        */
-
+ 
         Villager[] villagers = {
                 new Villager("Kashya", 30),
                 new Villager("Akara", 40),
@@ -98,7 +61,7 @@ public class Main {
         if(cheakIfAlives(villagers)){
             System.out.println("Obozowisko ocalone!");
         }else{
-            System.out.println("Obozowisko nie ocalone!");
+            System.out.println("Obozowisko ocalone!");
         }
 
 
