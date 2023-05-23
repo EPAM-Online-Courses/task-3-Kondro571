@@ -1,4 +1,4 @@
-package efs.task.oop
+package efs.task.oop;
 
 interface Fighter {
     void attack(Fighter victim);
