@@ -1,9 +1,12 @@
 package efs.task.oop;
 
+
 import java.util.Random;
 public class Main {
     public static void main(String[] args) {
- 
+
+
+
         Villager[] villagers = {
                 new Villager("Kashya", 30),
                 new Villager("Akara", 40),
@@ -23,10 +26,11 @@ public class Main {
             villager.sayHello();
         }
 
-        Object objectAkara = villagers[1];
-        Object objectDeckardCain = villagers[3];
-
-
+        Villager deckardCain = new ExtraordinaryVillager("Deckard Cain", 85, ExtraordinaryVillager.Skill.IDENTIFY);
+        Villager akara = new ExtraordinaryVillager("Akara", 40, ExtraordinaryVillager.Skill.SHELTER);
+        Object objectDeckardCain = deckardCain;
+        Object objectAkara = akara;
+        
         System.out.println("----------------------------------------------------------------");
 
         int n=villagers.length;
@@ -65,13 +69,13 @@ public class Main {
         }
 
 
+        deckardCain = (ExtraordinaryVillager) objectDeckardCain;
+        deckardCain.sayHello();
 
-        for (Villager villager : villagers) {
-            if (villager instanceof ExtraordinaryVillager) {
-                ExtraordinaryVillager extraordinaryVillager = (ExtraordinaryVillager) villager;
-                extraordinaryVillager.sayHello();
-            }
-        }
+        akara = (ExtraordinaryVillager) objectAkara;
+        akara.sayHello();
+
+
 
     }
 
@@ -83,4 +87,6 @@ public class Main {
         return false;
     }
 }
+
+
 
