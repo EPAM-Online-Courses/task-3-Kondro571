@@ -40,7 +40,7 @@ public class Main {
         int index = 0;
         Monsters monsters = new Monsters();
 
-        while (monsters.getMonstersHealth()>0 && cheakIfAlives(villagers)) {
+        while (monsters.monstersHealth>0 && cheakIfAlives(villagers)) {
 
 
             do{
@@ -48,19 +48,19 @@ public class Main {
                 index=random.nextInt(n);
             } while (villagers[index].getHealth()<=0);
 
-            if(monsters.getAndariel().getHealth()>0) {
-                villagers[index].attack(monsters.getAndariel());
+            if(monsters.andariel.getHealth()>0) {
+                villagers[index].attack(monsters.andariel);
             }else {
-                villagers[index].attack(monsters.getBlacksmith());
+                villagers[index].attack(monsters.blacksmith);
             }
 
-            if(monsters.getAndariel().getHealth()>0) {
-                monsters.getAndariel().attack(villagers[index]);
+            if(monsters.andariel.getHealth()>0) {
+                monsters.andariel.attack(villagers[index]);
             }else {
-                monsters.getBlacksmith().attack(villagers[index]);
+                monsters.blacksmith.attack(villagers[index]);
             }
 
-            System.out.println("Potwory posiadaja jeszcze " + monsters.getMonstersHealth() + " punkty zycia ");
+            System.out.println("Potwory posiadaja jeszcze " + monsters.monstersHealth + " punkty zycia ");
             System.out.println("Aktualnie walczacy osadnik to " + villagers[index].getName());
 
 
