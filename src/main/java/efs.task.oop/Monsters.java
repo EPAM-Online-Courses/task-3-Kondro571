@@ -6,14 +6,31 @@ public class Monsters {
         public void attack(Fighter victim) {
             victim.takeHit(getDamage());
         }
+         @Override
+        public void takeHit(int damage) {
+
+            health -= damage;
+            if (health <= 0) {
+                health=0;
+            }
+             monstersHealth=andariel.getHealth() + blacksmith.getHealth();
+        }
 
     };
 
     static final Monster blacksmith = new Monster(100, 25) {
         @Override
         public void attack(Fighter victim) {
-            victim.takeHit(5 + getDamage());
+            victim.takeHit(getDamage());
         }
+         @Override
+         public void takeHit(int damage) {
+            health -= damage+5;
+            if (health <= 0) {
+                health=0;
+            }
+             monstersHealth=andariel.getHealth() + blacksmith.getHealth();
+          }
     };
     Monster getAndariel(){
         return andariel;
@@ -22,10 +39,9 @@ public class Monsters {
     Monster getBlacksmith(){
         return blacksmith;
     }
-    static int monstersHealth = andariel.getHealth() + blacksmith.getHealth();
+    public static int monstersHealth = andariel.getHealth() + blacksmith.getHealth();
 
     int getMonstersHealth(){
-        monstersHealth = andariel.getHealth() + blacksmith.getHealth();
         return  monstersHealth;
     }
 }
