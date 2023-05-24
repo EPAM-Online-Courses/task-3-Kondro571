@@ -35,17 +35,9 @@ public class Monsters {
             monstersHealth-=(damage+5);
         }
     };
-    Monster getAndariel(){
-        return andariel;
-    }
-
-    Monster getBlacksmith(){
-        return blacksmith;
-    }
+    
     public static int monstersHealth = andariel.getHealth() + blacksmith.getHealth();
 
-    int getMonstersHealth(){
-        return  monstersHealth;
-    }
+   
 }
 
