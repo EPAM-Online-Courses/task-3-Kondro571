@@ -1,19 +1,21 @@
 package efs.task.oop;
 
+
 public class Monsters {
     static final Monster andariel = new Monster(10, 70) {
         @Override
         public void attack(Fighter victim) {
             victim.takeHit(getDamage());
         }
-         @Override
+        @Override
         public void takeHit(int damage) {
 
             health -= damage;
             if (health <= 0) {
+                damage+=health;
                 health=0;
             }
-             monstersHealth-=damage;
+            monstersHealth-=damage;
         }
 
     };
@@ -23,14 +25,15 @@ public class Monsters {
         public void attack(Fighter victim) {
             victim.takeHit(getDamage());
         }
-         @Override
-         public void takeHit(int damage) {
+        @Override
+        public void takeHit(int damage) {
             health -= (damage+5);
             if (health <= 0) {
+                damage+=health;
                 health=0;
             }
-             monstersHealth-=(damage+5);
-          }
+            monstersHealth-=(damage+5);
+        }
     };
     Monster getAndariel(){
         return andariel;
@@ -45,3 +48,4 @@ public class Monsters {
         return  monstersHealth;
     }
 }
+
