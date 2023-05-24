@@ -13,7 +13,7 @@ public class Monsters {
             if (health <= 0) {
                 health=0;
             }
-             monstersHealth=andariel.getHealth() + blacksmith.getHealth();
+             monstersHealth-=damage;
         }
 
     };
@@ -25,11 +25,11 @@ public class Monsters {
         }
          @Override
          public void takeHit(int damage) {
-            health -= damage+5;
+            health -= (damage+5);
             if (health <= 0) {
                 health=0;
             }
-             monstersHealth=andariel.getHealth() + blacksmith.getHealth();
+             monstersHealth-=(damage+5);
           }
     };
     Monster getAndariel(){
