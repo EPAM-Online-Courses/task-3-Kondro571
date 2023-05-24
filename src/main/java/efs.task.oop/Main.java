@@ -1,19 +1,23 @@
 package efs.task.oop;
 
-
 import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-
+        Villager kashya = new Villager("Kashya", 30);
+        Villager akara = new Villager("Akara", 40);
+        Villager gheed = new Villager("Gheed", 50);
+        Villager deckardCain = new Villager("Deckard Cain", 85);
+        Villager warriv = new Villager("Warriv", 35);
+        Villager flawia = new Villager("Flawia", 25);
 
         Villager[] villagers = {
-                new Villager("Kashya", 30),
-                new Villager("Akara", 40),
-                new Villager("Gheed", 50),
-                new Villager("Deckard Cain", 85),
-                new Villager("Warriv", 35),
-                new Villager("Flawia", 25)
+                kashya,
+                akara,
+                gheed,
+                deckardCain,
+                warriv,
+                flawia
         };
 
         for (Villager villager : villagers) {
@@ -26,11 +30,10 @@ public class Main {
             villager.sayHello();
         }
 
-        Villager deckardCain = new ExtraordinaryVillager("Deckard Cain", 85, ExtraordinaryVillager.Skill.IDENTIFY);
-        Villager akara = new ExtraordinaryVillager("Akara", 40, ExtraordinaryVillager.Skill.SHELTER);
-        Object objectDeckardCain = deckardCain;
-        Object objectAkara = akara;
-        
+
+        Object objectDeckardCain = villagers[1];
+        Object objectAkara = villagers[3];
+
         System.out.println("----------------------------------------------------------------");
 
         int n=villagers.length;
@@ -69,11 +72,11 @@ public class Main {
         }
 
 
-        deckardCain = (ExtraordinaryVillager) objectDeckardCain;
-        deckardCain.sayHello();
+        villagers[3] = (ExtraordinaryVillager) objectDeckardCain;
+        villagers[3].sayHello();
 
-        akara = (ExtraordinaryVillager) objectAkara;
-        akara.sayHello();
+        villagers[1] = (ExtraordinaryVillager) objectAkara;
+        villagers[1].sayHello();
 
 
 
@@ -87,6 +90,3 @@ public class Main {
         return false;
     }
 }
-
-
-
