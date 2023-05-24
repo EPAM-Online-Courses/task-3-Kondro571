@@ -1,8 +1,8 @@
 package efs.task.oop;
 
 abstract class Monster implements Fighter {
-    private int health;
-    private int damage;
+    protected int health;
+    protected int damage;
     public Monster(int health, int damage) {
         this.health = health;
         this.damage = damage;
